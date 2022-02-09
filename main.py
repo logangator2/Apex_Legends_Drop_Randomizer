@@ -2,14 +2,14 @@ import random
 
 # weapon, character, locations makeshift list DB
 weapons = ["Flatline", "G7", "Hemlok", "R-301", "Havoc", "Prowler",
-        "R-99", "Volt", "Devotion", "L-Star", "Longbow",
+        "R-99", "Alternator", "Devotion", "L-Star", "Longbow",
         "Peacekeeper", "Sentinel", "Charge Rifle", "EVA-8", "Mastiff",
         "Mozambique", "RE-45", "P2020", "Wingman", "30-30", "Boeck",
         "C.A.R. SMG", "Rampage", "Grenades"]
 characters = ["Bangalore", "Bloodhound", "Caustic", "Crypto", "Fuse", "Gibraltar", 
         "Horizon", "Lifeline", "Loba", "Mirage", "Octane", "Pathfinder",
         "Rampart", "Revenant", "Wattson", "Wraith", "Valkyrie", "Seer", 
-        "Ash"]
+        "Ash", "Mad Maggie"]
 locations_KC = ["Crash Site", "Artillery", "Spotted Lake", "Broken Relay", "Containment",
         "The Rig", "The Pit", "Capacitor", "Runoff", "Bunker", "Labs",
         "The Cage", "Airbase", "Hydro Dam", "Gauntlet", "Salvage", "Market", 
@@ -21,7 +21,7 @@ locations_WE = ["Trials", "Skyhook", "Survey Camp", "Climatizer", "Countdown",
 locations_O = ["Docks", "Carrier", "Fight Night", "Oasis", "Estates",
         "Elysium", "Hydroponics", "Bonsai Plaza", "Icarus", "Solar Array", "Orbital Cannon",
         "Grow Towers", "Gardens", "Rift", "Power Grid", "Turbine", "Energy Depot", 
-        "Hammond Labs"]
+        "Hammond Labs", "Phase Driver", "Terminal"]
 locations_SP = ["North Pad", "The Wall", "Highpoint", "Lightning Rod", "Checkpoint", 
         "Cascade Falls", "Command Center", "Thunder Watch", "Storm Center", "The Mill", "Cenote Cave", 
         "Barometer", "Antenna", "Launch Pad", "Ship Fall", "Gale Station", "Fish Farms"]
