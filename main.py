@@ -62,7 +62,7 @@ def main():
     r4 = tk.Radiobutton(root, text="King's Canyon", value='Value 1', variable=selected2)
     r5 = tk.Radiobutton(root, text="World's Edge", value='Value 2', variable=selected2)
     r6 = tk.Radiobutton(root, text='Olympus', value='value 3', variable=selected2)
-    r7 = tk.Radiobutton(root, text='Storm Point', value='value 3', variable=selected2)
+    r7 = tk.Radiobutton(root, text='Storm Point', value='value 4', variable=selected2)
     r4.pack()
     r5.pack()
     r6.pack()
