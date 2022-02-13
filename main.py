@@ -1,4 +1,10 @@
+"""
+Code written by Maxwell Logan
+Referenced code from https://www.pythontutorial.net/tkinter/ tutorials
+"""
+
 import random
+import tkinter as tk
 
 # weapon, character, locations makeshift list DB
 weapons = ["Flatline", "G7", "Hemlok", "R-301", "Havoc", "Prowler",
@@ -29,8 +35,58 @@ locations_SP = ["North Pad", "The Wall", "Highpoint", "Lightning Rod", "Checkpoi
 # main program
 def main():
 
-    # main loop boolean variable
-    looping = True
+    # root window for tkinter
+    root = tk.Tk()
+    root.title("Apex Legends Drop Randomizer")
+
+    # # grid layout for the input frame
+    # frame = tk.Frame(root)
+    # frame.columnconfigure(0, weight=1)
+    # frame.columnconfigure(0, weight=3)
+
+    # welcome message
+    message = tk.Label(root, text="Welcome to the Unofficial Apex Legends Drop Randomizer!")
+    message.pack()
+
+    # squad size radio selection widget
+    selected = tk.StringVar()
+    r1 = tk.Radiobutton(root, text='1', value='Value 1', variable=selected)
+    r2 = tk.Radiobutton(root, text='2', value='Value 2', variable=selected)
+    r3 = tk.Radiobutton(root, text='3', value='value 3', variable=selected)
+    r1.pack()
+    r2.pack()
+    r3.pack()
+
+    # map radio selection widget
+    selected2 = tk.StringVar()
+    r4 = tk.Radiobutton(root, text="King's Canyon", value='Value 1', variable=selected2)
+    r5 = tk.Radiobutton(root, text="World's Edge", value='Value 2', variable=selected2)
+    r6 = tk.Radiobutton(root, text='Olympus', value='value 3', variable=selected2)
+    r7 = tk.Radiobutton(root, text='Storm Point', value='value 3', variable=selected2)
+    r4.pack()
+    r5.pack()
+    r6.pack()
+    r7.pack()
+
+    # randomize button
+    randomize = tk.Button(root, text="Randomize!", command=lambda: randomize(selected, selected2))
+    randomize.pack()
+
+    # exit button
+    exit = tk.Button(text="Quit", command=root.destroy)
+    exit.pack()
+
+    # final tkinter loop
+    root.mainloop()
+    return
+
+def randomize(squad_size, map_name):
+    """
+    randomize - core function for the drop randomizer
+    **args:
+        squad_size - number of teammates on user's squad, including themselves
+        map_name - name of the map that the game is being played on
+    """
 
     # randomizer variables
     weapon1 = None
@@ -41,63 +97,33 @@ def main():
     # iterator for each squad member
     i = 0
 
-    print("Welcome to the Apex Legends Randomizer!\n")
-
-    while(looping):
-        # ask for user input
-        # check if map has already been input, otherwise skip
-        if map == None:
-            # try statement for handling non-number answers
-            try:
-                # accepts floats (larger pool of correct answers), converts to ints for looping later on
-                squad = int(float(input("How many in your squad? ")))
-            except:
-                print("Incorrect input, please try again.")
-                continue
-        
-        # check for incorrect float inputs
-        if squad > 3.0:
-            print("Number over squad limit, assuming 3 players.")
-            squad = 3
-        elif squad < 1.0:
-            print("Number under squad limit, assuming 1 player.")
-            squad = 1
-
-        # checked differently than the squad number because no translation (str->int) is necessary
-        map = input("Which Map? KC, WE, O, or SP? ")
-
-        # determine landing zone - more calculations, but clearer code
+    if map_name == "KC":
         KC_location = locations_KC[random.randint(0, len(locations_KC) - 1)]
+        # FIXME: Need to add the location to the output
+    elif map_name == "WE":
         WE_location = locations_WE[random.randint(0, len(locations_WE) - 1)]
+    elif map_name == "O":
         O_location = locations_O[random.randint(0, len(locations_O) - 1)]
+    elif map_name == "SP":
         SP_location = locations_SP[random.randint(0, len(locations_SP) - 1)]
 
-        if map == "KC":
-            print("\nKC: " + KC_location + "\n")
-        elif map == "WE":
-            print("\nWE: " + WE_location + "\n")
-        elif map == "O":
-            print("\nO: " + O_location + "\n")
-        elif map == "SP":
-            print("\nSP: " + SP_location + "\n")
-        else:
-            print("Incorrect input. Please try again.")
-            continue
+    # loop thrice for each squad member
+    for i in range(squad_size):
+        # determine weapons
+        weapon1 = weapons[random.randint(0, len(weapons) - 1)]
+        weapon2 = weapons[random.randint(0, len(weapons) - 1)]
+        # determine characters
+        character = characters[random.randint(0, len(characters) - 1)]
+        # print formatting
+        print()
+        print(character, " - ", weapon1, ",", weapon2)
+        print()
+        # removes characters already picked
+        characters.remove(character)
 
-        # loop thrice for each squad member
-        for i in range(squad):
-            # determine weapons
-            weapon1 = weapons[random.randint(0, len(weapons) - 1)]
-            weapon2 = weapons[random.randint(0, len(weapons) - 1)]
-            # determine characters
-            character = characters[random.randint(0, len(characters) - 1)]
-            # print formatting
-            print()
-            print(character, " - ", weapon1, ",", weapon2)
-            print()
-            # removes characters already picked
-            characters.remove(character)
-        return
+        # FIXME: Need to do some formatting here, add to output
+
+    return
 
 if __name__ == "__main__":
     main()
