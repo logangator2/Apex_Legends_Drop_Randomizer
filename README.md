@@ -1,6 +1,10 @@
 # Apex_Legends_Drop_Randomizer
-A drop randomizer for Apex Legends that provides characters, loadouts, and a drop location for your squad.
+An unofficial drop randomizer for Apex Legends that provides characters, loadouts, and a drop location for your squad.
 
 Written by: Maxwell Logan
 
-Date: 12 August 2021
+Uses: random, tkinter
+
+Referenced Code: Tutorials from https://www.pythontutorial.net/tkinter/
+
+Date: 12 February 2022
