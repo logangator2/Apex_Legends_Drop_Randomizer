@@ -10,11 +10,12 @@ from tkinter import ttk
 from tkinter import messagebox
 
 # weapon, character, locations makeshift list DB
-weapons = ["Flatline", "G7", "Hemlok", "R-301", "Havoc", "Prowler",
+weapons = ["Flatline", "Rampage", "Hemlok", "R-301", "Havoc", "Prowler",
         "R-99", "Alternator", "Devotion", "L-Star", "Longbow",
-        "Peacekeeper", "Sentinel", "Charge Rifle", "EVA-8", "Mastiff",
+        "Peacekeeper", "Sentinel", "Charge Rifle", "EVA-8", "C.A.R.",
         "Mozambique", "RE-45", "P2020", "Wingman", "30-30", "Boeck",
-        "C.A.R. SMG", "Rampage", "Grenades"]
+        "Grenades"]
+vault_weapons = ["Kraber", "G7", "Mastiff", "Volt"]
 characters = ["Bangalore", "Bloodhound", "Caustic", "Crypto", "Fuse", "Gibraltar", 
         "Horizon", "Lifeline", "Loba", "Mirage", "Octane", "Pathfinder",
         "Rampart", "Revenant", "Wattson", "Wraith", "Valkyrie", "Seer", 
@@ -30,10 +31,11 @@ locations_WE = ["Trials", "Skyhook", "Survey Camp", "Climatizer", "Countdown",
 locations_O = ["Docks", "Carrier", "Fight Night", "Oasis", "Estates",
         "Elysium", "Hydroponics", "Bonsai Plaza", "Icarus", "Solar Array", "Orbital Cannon",
         "Grow Towers", "Gardens", "Rift", "Power Grid", "Turbine", "Energy Depot", 
-        "Hammond Labs", "Phase Driver", "Terminal"]
+        "Hammond Labs", "Phase Driver", "Terminal", "Lifeline's Clinic"]
 locations_SP = ["North Pad", "The Wall", "Highpoint", "Lightning Rod", "Checkpoint", 
         "Cascade Falls", "Command Center", "Thunder Watch", "Storm Center", "The Mill", "Cenote Cave", 
-        "Barometer", "Antenna", "Launch Pad", "Ship Fall", "Gale Station", "Fish Farms"]
+        "Barometer", "Antenna", "Launch Pad", "Ship Fall", "Gale Station", "Fish Farms",
+        "Downed Beast"]
 
 # root window for tkinter
 root = tk.Tk()
@@ -74,9 +76,16 @@ def main():
     r7 = ttk.Radiobutton(root, 
         text='Storm Point', value='Storm Point', variable=selected2).grid(column=2, row=5)
 
+    # use care package weapons checkbox
+    selected3 = tk.StringVar()
+    c1 = ttk.Checkbutton(root, 
+        text="Include Care Package Weapons?",variable=selected3, onvalue=1, offvalue=0, 
+        command=lambda: set_weapons()).grid(column=1, row=6)
+    
     # randomize button
     randomizer = ttk.Button(root, 
-        text="Randomize!", command=lambda: randomize(int(selected.get()), selected2.get())).grid(column=1, row=6)
+        text="Randomize!", 
+        command=lambda: randomize(int(selected.get()), selected2.get())).grid(column=1, row=7)
 
     # exit button
     exit = ttk.Button(text="Quit", command=root.destroy).grid(column=1, row=10)
@@ -101,6 +110,9 @@ def randomize(squad_size, map_name):
     drop_location = None
     output_str = ""
 
+    # copy character list for fresh list every time randomization is called
+    char_list = characters.copy()
+
     # iterator for each squad member
     i = 0
 
@@ -123,19 +135,31 @@ def randomize(squad_size, map_name):
         weapon1 = weapons[random.randint(0, len(weapons) - 1)]
         weapon2 = weapons[random.randint(0, len(weapons) - 1)]
         # determine characters
-        character = characters[random.randint(0, len(characters) - 1)]
+        character = char_list[random.randint(0, len(char_list) - 1)]
         # formatting
         character_str = "\n" + character + " - " + weapon1 + ", " + weapon2 + "\n"
         # removes characters already picked
-        characters.remove(character)
+        char_list.remove(character)
         # add character_str to output message
         output_str += character_str
 
+    # testing only
     # print(output_str)
 
     # display outbut in tkinter messagebox
     tk.messagebox.showinfo(title="Randomization", message=output_str)
 
+    return
+
+def set_weapons():
+    global weapons
+    if vault_weapons[0] not in weapons:
+        weapons = weapons + vault_weapons
+    else:
+        for i in weapons:
+            for j in vault_weapons:
+                if i == j:
+                    weapons.remove(i)
     return
 
 if __name__ == "__main__":
