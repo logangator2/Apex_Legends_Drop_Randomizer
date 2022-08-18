@@ -10,20 +10,20 @@ from tkinter import ttk
 from tkinter import messagebox
 
 # weapon, character, locations makeshift list DB
-weapons = ["Flatline", "Rampage", "Hemlok", "R-301", "Havoc", "Prowler",
+weapons = ["Flatline", "Volt", "Hemlok", "R-301", "Havoc", "Prowler",
         "R-99", "Alternator", "Devotion", "L-Star", "Longbow",
         "Peacekeeper", "Sentinel", "Charge Rifle", "EVA-8", "C.A.R.",
-        "Mozambique", "RE-45", "P2020", "Wingman", "30-30", "Boeck",
+        "Mozambique", "RE-45", "P2020", "Wingman", "30-30", "G7",
         "Grenades"]
-vault_weapons = ["Kraber", "G7", "Mastiff", "Volt"]
+vault_weapons = ["Kraber", "Boeck", "Mastiff", "Rampage"]
 characters = ["Bangalore", "Bloodhound", "Caustic", "Crypto", "Fuse", "Gibraltar", 
         "Horizon", "Lifeline", "Loba", "Mirage", "Octane", "Pathfinder",
         "Rampart", "Revenant", "Wattson", "Wraith", "Valkyrie", "Seer", 
-        "Ash", "Mad Maggie"]
+        "Ash", "Mad Maggie", "Vantage"]
 locations_KC = ["Crash Site", "Artillery", "Spotted Lake", "Broken Relay", "Containment",
         "The Rig", "The Pit", "Capacitor", "Runoff", "Bunker", "Labs",
         "The Cage", "Airbase", "Hydro Dam", "Gauntlet", "Salvage", "Market", 
-        "Repulsor", "Mirage Voyage", "Swamps", "Water Treatment"]
+        "Repulsor", "Mirage Voyage", "Swamps", "Water Treatment", "Relic"]
 locations_WE = ["Trials", "Skyhook", "Survey Camp", "Climatizer", "Countdown",
         "Epicenter", "Overlook", "Lava Fissure", "Landslide", "Fragment West", "Fragment East", 
         "Staging", "Harvester", "Geyser", "Thermal Station", "Lava Siphon", "Tree", 
