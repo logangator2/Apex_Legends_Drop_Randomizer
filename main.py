@@ -13,9 +13,9 @@ from tkinter import messagebox
 weapons = ["Flatline", "Volt", "Hemlok", "R-301", "Havoc", "Prowler",
         "R-99", "Alternator", "Devotion", "L-Star", "Longbow",
         "Peacekeeper", "Sentinel", "Charge Rifle", "EVA-8", "C.A.R.",
-        "Mozambique", "RE-45", "P2020", "Wingman", "30-30", "G7",
+        "Mozambique", "Mastiff", "P2020", "Wingman", "30-30", "G7",
         "Grenades"]
-vault_weapons = ["Kraber", "Boeck", "Mastiff", "Rampage"]
+vault_weapons = ["Kraber", "Boeck", "RE-45", "Rampage"]
 characters = ["Bangalore", "Bloodhound", "Caustic", "Crypto", "Fuse", "Gibraltar", 
         "Horizon", "Lifeline", "Loba", "Mirage", "Octane", "Pathfinder",
         "Rampart", "Revenant", "Wattson", "Wraith", "Valkyrie", "Seer", 
@@ -36,6 +36,12 @@ locations_SP = ["North Pad", "The Wall", "Highpoint", "Lightning Rod", "Checkpoi
         "Cascade Falls", "Command Center", "Thunder Watch", "Storm Center", "The Mill", "Cenote Cave", 
         "Barometer", "Antenna", "Launch Pad", "Ship Fall", "Gale Station", "Fish Farms",
         "Downed Beast"]
+locations_BM = ["Alpha Base", "Atmostation", "Bionomics", "Breaker Wharf", "Cultivation",
+        "Dry Gulch", "Eternal Gardens", "Production Yard", "North Promenade", "South Promenade", "Stasis Net Array",
+        "Terraformer", "The Core", "The Divide", "The Foundry"]
+
+# set duplicate flag to False
+duplicate_flag = False
 
 # root window for tkinter
 root = tk.Tk()
@@ -75,17 +81,25 @@ def main():
         text='Olympus', value='Olympus', variable=selected2).grid(column=2, row=4)
     r7 = ttk.Radiobutton(root, 
         text='Storm Point', value='Storm Point', variable=selected2).grid(column=2, row=5)
+    r8 = ttk.Radiobutton(root, 
+        text='Broken Moon', value='Broken Moon', variable=selected2).grid(column=2, row=6)
 
     # use care package weapons checkbox
     selected3 = tk.StringVar()
     c1 = ttk.Checkbutton(root, 
         text="Include Care Package Weapons?",variable=selected3, onvalue=1, offvalue=0, 
-        command=lambda: set_weapons()).grid(column=1, row=6)
+        command=lambda: set_weapons()).grid(column=1, row=7)
+
+    # use duplicate weapons checkbox
+    selected4 = tk.StringVar()
+    c2 = ttk.Checkbutton(root,
+        text="Include Duplicate Weapons?", variable=selected4, onvalue=1, offvalue=0,
+        command=lambda: set_dupe_flag()).grid(column=1, row=8)
     
     # randomize button
     randomizer = ttk.Button(root, 
         text="Randomize!", 
-        command=lambda: randomize(int(selected.get()), selected2.get())).grid(column=1, row=7)
+        command=lambda: randomize(int(selected.get()), selected2.get())).grid(column=1, row=9)
 
     # exit button
     exit = ttk.Button(text="Quit", command=root.destroy).grid(column=1, row=10)
@@ -109,6 +123,7 @@ def randomize(squad_size, map_name):
     character_str = None
     drop_location = None
     output_str = ""
+    backup_weapons = []
 
     # copy character list for fresh list every time randomization is called
     char_list = characters.copy()
@@ -125,7 +140,9 @@ def randomize(squad_size, map_name):
         drop_location = "Olympus Drop Location:\n" + " " + locations_O[random.randint(0, len(locations_O) - 1)]
     elif map_name == "Storm Point":
         drop_location = "Storm Point Drop Location:\n" + " " + locations_SP[random.randint(0, len(locations_SP) - 1)]
-
+    elif map_name == "Broken Moon":
+        drop_location = "Broken Moon Drop Location:\n" + " " + locations_BM[random.randint(0, len(locations_BM) - 1)]
+    
     # add drop location to output_str
     output_str += drop_location + "\n"
 
@@ -133,7 +150,13 @@ def randomize(squad_size, map_name):
     for i in range(squad_size):
         # determine weapons
         weapon1 = weapons[random.randint(0, len(weapons) - 1)]
+        if duplicate_flag:
+            weapons.remove(weapon1)
+            backup_weapons.append(weapon1)
         weapon2 = weapons[random.randint(0, len(weapons) - 1)]
+        if duplicate_flag:
+            weapons.remove(weapon2)
+            backup_weapons.append(weapon2)
         # determine characters
         character = char_list[random.randint(0, len(char_list) - 1)]
         # formatting
@@ -142,6 +165,9 @@ def randomize(squad_size, map_name):
         char_list.remove(character)
         # add character_str to output message
         output_str += character_str
+
+    for w in backup_weapons:
+        weapons.append(w)
 
     # testing only
     # print(output_str)
@@ -160,6 +186,14 @@ def set_weapons():
             for j in vault_weapons:
                 if i == j:
                     weapons.remove(i)
+    return
+
+def set_dupe_flag():
+    global duplicate_flag
+    if duplicate_flag == True:
+        duplicate_flag = False
+    else:
+        duplicate_flag = True
     return
 
 if __name__ == "__main__":
