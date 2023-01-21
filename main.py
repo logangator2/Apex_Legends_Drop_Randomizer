@@ -70,6 +70,10 @@ def main():
 
     # map selection label
     maps = ttk.Label(root, text="Which map are you playing on?").grid(column=2, row=1)
+    
+    # map default view
+    img1 = tk.PhotoImage(file='test_image.png')
+    img_kc = ttk.Label(root, image=img1).grid(column=1, row=10)
 
     # map radio selection widget
     selected2 = tk.StringVar()
@@ -99,10 +103,10 @@ def main():
     # randomize button
     randomizer = ttk.Button(root, 
         text="Randomize!", 
-        command=lambda: randomize(int(selected.get()), selected2.get())).grid(column=1, row=9)
+        command=lambda: randomize(int(selected.get()), selected2.get())).grid(column=1, row=19)
 
     # exit button
-    exit = ttk.Button(text="Quit", command=root.destroy).grid(column=1, row=10)
+    exit = ttk.Button(text="Quit", command=root.destroy).grid(column=1, row=20)
 
     # final tkinter loop
     root.mainloop()

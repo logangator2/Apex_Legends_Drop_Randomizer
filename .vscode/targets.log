@@ -1,128 +1,213 @@
-make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-# GNU Make 3.81
-# Copyright (C) 2006  Free Software Foundation, Inc.
-# This is free software; see the source for copying conditions.
-# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
-# PARTICULAR PURPOSE.
+make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
 
-# This program built for i386-apple-darwin11.3.0
+# GNU Make 4.3
+# Built for Windows32
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Nov 12 11:05:16 2022
+# Make data base, printed on Sat Jan 21 12:38:15 2023
 
 # Variables
 
-# automatic
-<D = $(patsubst %/,%,$(dir $<))
-# automatic
-?F = $(notdir $?)
-# automatic
-?D = $(patsubst %/,%,$(dir $?))
-# automatic
-@D = $(patsubst %/,%,$(dir $@))
-# automatic
-@F = $(notdir $@)
-# makefile
-CURDIR := /Users/maxwelllogan/Documents/projects/Apex_Randomizer[S6Complete]/Apex_Legends_Drop_Randomzier
-# makefile
-SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
-_ = /usr/bin/make
-# makefile (from `Makefile', line 1)
-MAKEFILE_LIST :=  Makefile
+SYSTEMDRIVE = C:
 # environment
-VSCODE_CWD = /
+LC_ALL = C
 # environment
-PATH = /Library/Frameworks/Python.framework/Versions/3.8/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools
+USERPROFILE = C:\Users\logan
 # environment
-ELECTRON_RUN_AS_NODE = 1
+LOCAL_GIT_DIRECTORY = C:\Users\logan\AppData\Local\GitHubDesktop\app-3.1.4\resources\app\git
+# environment
+LOCALAPPDATA = C:\Users\logan\AppData\Local
+# environment
+VSCODE_CWD = C:\Users\logan\AppData\Local\GitHubDesktop\app-3.1.4
+# environment
+CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
+# environment
+SYSTEMROOT = C:\WINDOWS
+# environment
+PROCESSOR_LEVEL = 6
+# environment
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
 # default
-.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
+MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
+# automatic
+@D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.2nHUmHM4Tx/Listeners
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\LOCAL\crashpad_12464_XQHWONHAPQOJVUDZ
+# environment
+FPS_BROWSER_USER_PROFILE_STRING = Default
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# automatic
+%D = $(patsubst %/,%,$(patsubst %\,%,$(dir $%)))
+# automatic
+^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
 # automatic
 %F = $(notdir $%)
 # environment
-PWD = /Users/maxwelllogan/Documents/projects/Apex_Randomizer[S6Complete]/Apex_Legends_Drop_Randomzier
+VSCODE_CODE_CACHE_PATH = C:\Users\logan\AppData\Roaming\Code\CachedData\97dec172d3256f8ca4bfb2143f3f76b503ca0534
 # environment
-ORIGINAL_XDG_CURRENT_DESKTOP = undefined
-# environment
-VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
-# environment
-HOME = /Users/maxwelllogan
+LANG = C
 # default
-MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
+.LOADED := 
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/maxwelllogan/Library/Application Support/Code/CachedData/8fa188b2b301d36553cbc9ce1b0a146ccb93351f
+TMP = C:\Users\logan\AppData\Local\Temp
+# default
+.INCLUDE_DIRS = .
 # environment
-LOGNAME = maxwelllogan
+CONFIGSETROOT = C:\WINDOWS\ConfigSetRoot
+# environment
+PROCESSOR_ARCHITEW6432 = AMD64
+# makefile
+MAKEFLAGS = pqrR
+# environment
+ONEDRIVE = C:\Users\logan\OneDrive
+# makefile
+CURDIR := c:/Users/logan/OneDrive/Documents/GitHub/Apex_Legends_Drop_Randomizer
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
-# environment
-VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
-^D = $(patsubst %/,%,$(dir $^))
+*D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
 # environment
-XPC_FLAGS = 0x0
+PROGRAMFILES = C:\Program Files (x86)
+# environment
+MFLAGS = -pqrR
 # default
-MAKE = $(MAKE_COMMAND)
+.SHELLFLAGS := -c
+# environment
+COMMONPROGRAMW6432 = C:\Program Files\Common Files
+# automatic
++D = $(patsubst %/,%,$(patsubst %\,%,$(dir $+)))
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_PID = 12464
+# automatic
+?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
+# automatic
+*F = $(notdir $*)
+# automatic
+<D = $(patsubst %/,%,$(patsubst %\,%,$(dir $<)))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# default
+MAKE_HOST := Windows32
+# environment
+PROGRAMDATA = C:\ProgramData
+# default
+SHELL := sh.exe
+# environment
+CLASSPATH = .;C:\Program Files (x86)\QuickTime\QTSystem\QTJava.zip
+# environment
+HOMEPATH = \Users\logan
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 1
-# default
-MAKE_VERSION := 3.81
+DRIVERDATA = C:\Windows\System32\Drivers\DriverData
 # environment
-USER = maxwelllogan
-# makefile
-.DEFAULT_GOAL := run
-# automatic
-%D = $(patsubst %/,%,$(dir $%))
-# default
-MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
-# default
-.VARIABLES := 
+COMSPEC = C:\WINDOWS\system32\cmd.exe
 # environment
-TMPDIR = /var/folders/xd/yyq_sd592z76r11c8w4jcyym0000gn/T/
-# automatic
-*F = $(notdir $*)
-# environment
-VSCODE_IPC_HOOK = /Users/maxwelllogan/Library/Application Support/Code/1.73.0-main.sock
-# environment
-MallocNanoZone = 0
-# makefile
-MAKEFLAGS = Rrqp
-# environment
-MFLAGS = -Rrqp
-# automatic
-*D = $(patsubst %/,%,$(dir $*))
-# environment
-XPC_SERVICE_NAME = com.microsoft.VSCode.41992
-# automatic
-+D = $(patsubst %/,%,$(dir $+))
-# automatic
-+F = $(notdir $+)
-# environment
-__CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x0
-# default
-MAKEFILES := 
-# automatic
-<F = $(notdir $<)
-# environment
-LC_ALL = C
-# automatic
-^F = $(notdir $^)
-# default
-SUFFIXES := 
+WINDIR = C:\WINDOWS
 # environment
 MAKELEVEL := 0
 # environment
-LANG = C
+QTJAVA = C:\Program Files (x86)\QuickTime\QTSystem\QTJava.zip
+# default
+MAKE = $(MAKE_COMMAND)
 # environment
-VSCODE_PID = 59020
+PATH = C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Users\logan\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\logan\AppData\Local\Programs\Python\Python310\;C:\Users\logan\AppData\Local\Microsoft\WindowsApps;C:\Users\logan\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\logan\AppData\Local\GitHubDesktop\bin;C:\msys64\mingw64\bin;
+# environment
+COMPUTERNAME = DESKTOP-T5JHOTK
+# default
+MAKEFILES := 
+# automatic
+^F = $(notdir $^)
+# environment
+PROMPT = $P$G
+# environment
+CHOCOLATEYLASTPATHUPDATE = 132974880364086444
+# environment
+LOGONSERVER = \\DESKTOP-T5JHOTK
+# environment
+USERNAME = logan
+# environment
+COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
+# automatic
+?F = $(notdir $?)
+# environment
+PROGRAMW6432 = C:\Program Files
+# environment
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+# automatic
++F = $(notdir $+)
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+USERDOMAIN = DESKTOP-T5JHOTK
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+OS = Windows_NT
+# makefile
+.DEFAULT_GOAL := run
+# default
+MAKE_VERSION := 4.3
+# environment
+PROGRAMFILES(X86) = C:\Program Files (x86)
+# environment
+USERDOMAIN_ROAMINGPROFILE = DESKTOP-T5JHOTK
+# environment
+NUMBER_OF_PROCESSORS = 16
+# environment
+PUBLIC = C:\Users\Public
+# environment
+APPDATA = C:\Users\logan\AppData\Roaming
+# environment
+HOMEDRIVE = C:
+# environment
+PROCESSOR_ARCHITECTURE = x86
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+TEMP = C:\Users\logan\AppData\Local\Temp
+# environment
+VSCODE_IPC_HOOK = \\.\pipe\5e32fed07c60fda8627caa47a3e52ed2-1.74.3-main-sock
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+ALLUSERSPROFILE = C:\ProgramData
+# environment
+SESSIONNAME = Console
+# environment
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
+# environment
+PROCESSOR_REVISION = a505
+# environment
+PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 165 Stepping 5, GenuineIntel
 # variable set hash-table stats:
-# Load=55/1024=5%, Rehash=0, Collisions=1/78=1%
+# Load=97/1024=9%, Rehash=0, Collisions=8/124=6%
 
 # Pattern-specific Variable Values
 
@@ -130,9 +215,9 @@ VSCODE_PID = 59020
 
 # Directories
 
-# . (device 16777220, inode 18555785): 8 files, no impossibilities.
+# . (key c:/Users/logan/OneDrive/Documents/GitHub/Apex_Legends_Drop_Randomizer, mtime 1674326283): 9 files, no impossibilities.
 
-# 8 files, no impossibilities in 1 directories.
+# 9 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -141,28 +226,18 @@ VSCODE_PID = 59020
 # Files
 
 # Not a target:
-all:
-#  Command-line target.
+Makefile:
 #  Implicit rule search has been done.
-#  File does not exist.
-#  File has not been updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Last modified 2022-08-18 13:46:09
+#  File has been updated.
+#  Successfully updated.
 
-# Not a target:
-.SUFFIXES:
+clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-
-# Not a target:
-Makefile:
-#  Implicit rule search has been done.
-#  Last modified 2022-02-27 16:28:21
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  recipe to execute (from 'Makefile', line 6):
+	rm -rf __pycache__
 
 # Not a target:
 .DEFAULT:
@@ -170,38 +245,36 @@ Makefile:
 #  Modification time never checked.
 #  File has not been updated.
 
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
 run:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 2):
+#  recipe to execute (from 'Makefile', line 2):
 	python3 main.py
 	make clean
-	
-
-clean:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  commands to execute (from `Makefile', line 6):
-	rm -rf __pycache__
-	
 
 # files hash-table stats:
-# Load=6/1024=1%, Rehash=0, Collisions=0/18=0%
+# Load=6/1024=1%, Rehash=0, Collisions=0/16=0%
 # VPATH Search Paths
 
-# No `vpath' search paths.
+# No  
+'vpath' search paths.
 
-# No general (`VPATH' variable) search path.
+# No general ('VPATH' variable) search path.
 
-# # of strings in strcache: 1
-# # of strcache buffers: 1
-# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
-# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+# strcache buffers: 1 (0) / strings = 14 / storage = 104 B / avg = 7 B
+# current buf: size = 8174 B / used = 104 B / count = 14 / avg = 7 B
 
-# Finished Make data base on Sat Nov 12 11:05:16 2022
+# strcache performance: lookups = 20 / hit rate = 30%
+# hash-table stats:
+# Load=14/8192=0%, Rehash=0, Collisions=0/20=0%
+# Finished Make data base on Sat Jan 21 12:38:15 2023
 
  
-make: *** No rule to make target `all'.  Stop.
-

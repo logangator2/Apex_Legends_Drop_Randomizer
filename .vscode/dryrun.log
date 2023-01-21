@@ -1,6 +1,6 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory `/Users/maxwelllogan/Documents/projects/Apex_Randomizer[S6Complete]/Apex_Legends_Drop_Randomzier'
+make.exe --dry-run --always-make --keep-going --print-directory
+make: Entering directory 'c:/Users/logan/OneDrive/Documents/GitHub/Apex_Legends_Drop_Randomizer'
 python3 main.py
 make clean
-make: Leaving directory `/Users/maxwelllogan/Documents/projects/Apex_Randomizer[S6Complete]/Apex_Legends_Drop_Randomzier'
+make: Leaving directory 'c:/Users/logan/OneDrive/Documents/GitHub/Apex_Legends_Drop_Randomizer'
  
