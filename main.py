@@ -167,16 +167,16 @@ def randomize(squad_size, map_name):
     for we in range(len(weapons)):
         clean_backup.append(weapons[we])
 
+    # check for vault flag
+    if vault_flag:
+        weapons = weapons + vault_weapons
+
+    # check for crafting flag
+    if crafting_flag:
+        weapons = weapons + crafting_weapons
+
     # loop once for each squad member
     for i in range(squad_size):
-        
-        # check for vault flag
-        if vault_flag:
-            weapons = weapons + vault_weapons
-
-        # check for crafting flag
-        if crafting_flag:
-            weapons = weapons + crafting_weapons
 
         # determine weapon 1
         weapon1 = weapons[random.randint(0, len(weapons) - 1)]
