@@ -11,15 +11,15 @@ from tkinter import messagebox
 
 # weapon, character, locations makeshift list-DB
 weapons = ["Flatline", "Nemesis", "Rampage", "R-301", "Havoc", "Prowler",
-        "R-99", "Alternator", "Devotion", "L-Star", "Grenades",
-        "Peacekeeper", "Sentinel", "Charge Rifle", "EVA-8", "C.A.R.",
+        "R-99", "Volt", "Devotion", "RE-45", "Grenades",
+        "Peacekeeper", "Longbow", "Charge Rifle", "EVA-8", "C.A.R.",
         "Mozambique", "Mastiff", "P2020", "Wingman", "30-30", "G7"]
-vault_weapons = ["Kraber*", "Boeck*", "RE-45*", "Hemlok*"]
-crafting_weapons = ["Volt (C)", "Longbow (C)"]
+vault_weapons = ["Kraber*", "Boeck*", "L-Star*", "Hemlok*"]
+crafting_weapons = ["Alternator (C)", "Sentinel (C)"]
 characters = ["Bangalore", "Bloodhound", "Caustic", "Crypto", "Fuse", "Gibraltar", 
         "Horizon", "Lifeline", "Loba", "Mirage", "Octane", "Pathfinder",
         "Rampart", "Revenant", "Wattson", "Wraith", "Valkyrie", "Seer", 
-        "Ash", "Mad Maggie", "Vantage"]
+        "Ash", "Mad Maggie", "Newcastle", "Vantage", "Catalyst", "Ballistic"]
 locations_KC = ["Crash Site", "Artillery", "Spotted Lake", "Broken Relay", "Containment",
         "The Rig", "The Pit", "Capacitor", "Runoff", "Bunker", "Labs",
         "The Cage", "Airbase", "Hydro Dam", "Gauntlet", "Salvage", "Market", 
@@ -27,7 +27,8 @@ locations_KC = ["Crash Site", "Artillery", "Spotted Lake", "Broken Relay", "Cont
 locations_WE = ["Trials", "Skyhook", "Survey Camp", "Climatizer", "Countdown",
         "Epicenter", "Overlook", "Lava Fissure", "Landslide", "Fragment West", "Fragment East", 
         "Staging", "Harvester", "Geyser", "Thermal Station", "Lava Siphon", "Tree", 
-        "Launch Site", "Dome", "Lava City", "Big Maude"]
+        "Launch Site", "Dome", "Lava City", "Big Maude", "Monument", "Stacks",
+        "Mirage A Trois"]
 locations_O = ["Docks", "Carrier", "Fight Night", "Oasis", "Estates",
         "Elysium", "Hydroponics", "Bonsai Plaza", "Icarus", "Solar Array", "Orbital Cannon",
         "Grow Towers", "Gardens", "Rift", "Power Grid", "Turbine", "Energy Depot", 
