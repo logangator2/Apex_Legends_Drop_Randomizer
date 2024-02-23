@@ -11,15 +11,16 @@ from tkinter import messagebox
 
 # weapon, character, locations makeshift list-DB
 weapons = ["Flatline", "Nemesis", "Rampage", "R-301", "Havoc", "Prowler",
-        "R-99", "Volt", "Devotion", "RE-45", "Grenades",
-        "Peacekeeper", "Longbow", "Charge Rifle", "EVA-8", "C.A.R.",
-        "Mozambique", "Mastiff", "P2020", "Wingman", "30-30", "G7"]
-vault_weapons = ["Kraber*", "Boeck*", "L-Star*", "Hemlok*"]
-crafting_weapons = ["Alternator (C)", "Sentinel (C)"]
+        "R-99", "Volt", "Devotion", "RE-45", "Grenades", "Alternator",
+        "Peacekeeper", "Longbow", "Charge Rifle", "L-Star", "C.A.R.", "Sentinel",
+        "Mozambique", "Mastiff", "P2020", "Hemlok", "30-30", "G7"]
+vault_weapons = ["Kraber*", "Boeck*", "EVA-8*", "Wingman*"]
+# crafting_weapons = ["Alternator (C)", "Sentinel (C)"] # deprecated, weapons arent crafted anymore as of s20
 characters = ["Bangalore", "Bloodhound", "Caustic", "Crypto", "Fuse", "Gibraltar", 
         "Horizon", "Lifeline", "Loba", "Mirage", "Octane", "Pathfinder",
         "Rampart", "Revenant", "Wattson", "Wraith", "Valkyrie", "Seer", 
         "Ash", "Mad Maggie", "Newcastle", "Vantage", "Catalyst", "Ballistic"]
+# maybe separate into different groups of legends (assault, skirmisher, etc.)
 locations_KC = ["Crash Site", "Artillery", "Spotted Lake", "Broken Relay", "Containment",
         "The Rig", "The Pit", "Capacitor", "Runoff", "Bunker", "Labs",
         "The Cage", "Airbase", "Hydro Dam", "Gauntlet", "Salvage", "Market", 
@@ -94,10 +95,10 @@ def main():
         command=lambda: set_vault_flag()).grid(column=1, row=7)
 
     # use craftable weapons checkbox
-    selected4 = tk.StringVar()
-    c2 = ttk.Checkbutton(root, 
-        text="Include Craftable Weapons?",variable=selected4, onvalue=1, offvalue=0, 
-        command=lambda: set_craft_flag()).grid(column=1, row=8)
+    # selected4 = tk.StringVar()
+    # c2 = ttk.Checkbutton(root, 
+    #     text="Include Craftable Weapons?",variable=selected4, onvalue=1, offvalue=0, 
+    #     command=lambda: set_craft_flag()).grid(column=1, row=8)
 
     # use duplicate weapons checkbox
     selected5 = tk.StringVar()
